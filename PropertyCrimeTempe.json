@@ -1,0 +1,37 @@
+{
+   "head":{
+      "vars":[
+         "PropertyCrimevalue",
+         "MotorVehicleCrimevalue",
+         "BurglaryCrimevalue",
+         "ArsonCrimevalue",
+         "LarcenyCrimevalue"
+      ]
+   },
+   "results":{
+      "bindings":[
+         {
+            "PropertyCrimevalue":{
+               "type":"literal",
+               "value":"8144"
+            },
+            "BurglaryCrimevalue":{
+               "type":"literal",
+               "value":"1200"
+            },
+            "MotorVehicleCrimevalue":{
+               "type":"literal",
+               "value":"450"
+            },
+            "ArsonCrimevalue":{
+               "type":"literal",
+               "value":"38"
+            },
+            "LarcenyCrimevalue":{
+               "type":"literal",
+               "value":"6494"
+            }
+         }
+      ]
+   }
+}

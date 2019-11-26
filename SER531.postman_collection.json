@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "314a82aa-4d82-4df4-93a5-8e964b7cd463",
+		"name": "SER531",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Mock",
+			"item": [
+				{
+					"name": "Get States Mock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getStates?mock=true",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getStates"
+							],
+							"query": [
+								{
+									"key": "mock",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cities Mock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getCities?state=ARIZONA&mock=true",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getCities"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "ARIZONA"
+								},
+								{
+									"key": "mock",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Crime Rates Mock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getCrimeRates?state=ARIZONA&city=Tempe&mock=true",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getCrimeRates"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "ARIZONA"
+								},
+								{
+									"key": "city",
+									"value": "Tempe"
+								},
+								{
+									"key": "mock",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Requests",
+			"item": [
+				{
+					"name": "Get States",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getStates",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getStates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getCities?state=ARIZONA",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getCities"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "ARIZONA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Crime Rates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getCrimeRates?state=ARIZONA&city=Tempe",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getCrimeRates"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "ARIZONA"
+								},
+								{
+									"key": "city",
+									"value": "Tempe"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
