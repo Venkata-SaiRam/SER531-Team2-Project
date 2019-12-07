@@ -69,7 +69,7 @@ const States = ({ states }) => {
     setWaiting(true);
     setInitial(false);
     Axios.get(
-      `http://localhost:8080/getCities?state=${selection}&mock=true`
+      `http://localhost:8080/getCities?state=${selection}&mock=false`
     ).then(data => {
       cities = data.data.cities;
       setGettingCities(false);
@@ -106,7 +106,7 @@ const States = ({ states }) => {
     setDisplayOn(true);
     setWaiting(true);
     Axios.get(
-      `http://localhost:8080/getCrimeRates?state=${selectedState}&city=${selectedCity}&mock=true`
+      `http://localhost:8080/getCrimeRates?state=${selectedState}&city=${selectedCity}&mock=false`
     ).then(data => {
       setContent(data.data);
       setWaiting(false);
