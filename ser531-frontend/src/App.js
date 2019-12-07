@@ -13,6 +13,7 @@ const defaultOptions = {
     preserveAspectRatio: "xMidYMid slice"
   }
 };
+
 class App extends Component {
   state = {
     states: [],
@@ -20,7 +21,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    Axios.get("http://localhost:8080/getStates?mock=false")
+    Axios.get("http://localhost:8080/getStates?mock=true")
       .then(data => {
         this.setState({ states: data.data.states, gotResults: true });
       })
@@ -29,7 +30,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ color: "white" }}>
         {console.log(`Results : ${this.state.gotResults}`)}
         {this.state.gotResults ? (
           <States states={this.state.states} />

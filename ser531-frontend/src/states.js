@@ -69,7 +69,7 @@ const States = ({ states }) => {
     setWaiting(true);
     setInitial(false);
     Axios.get(
-      `http://localhost:8080/getCities?state=${selection}&mock=false`
+      `http://localhost:8080/getCities?state=${selection}&mock=true`
     ).then(data => {
       cities = data.data.cities;
       setGettingCities(false);
@@ -106,7 +106,7 @@ const States = ({ states }) => {
     setDisplayOn(true);
     setWaiting(true);
     Axios.get(
-      `http://localhost:8080/getCrimeRates?state=${selectedState}&city=${selectedCity}&mock=false`
+      `http://localhost:8080/getCrimeRates?state=${selectedState}&city=${selectedCity}&mock=true`
     ).then(data => {
       setContent(data.data);
       setWaiting(false);
@@ -114,18 +114,28 @@ const States = ({ states }) => {
   };
 
   return (
-    <div>
+    <div style={{ color: "white" }}>
       <div>
         <h1 align="center">SER 531 - Crime Rate Analysis</h1>
         <h4 align="right">Team - 2(Fall 2019)</h4>
       </div>
       <div>
-        <Button className={classes.button} onClick={handleOpen}>
+        <Button
+          className={classes.button}
+          onClick={handleOpen}
+          style={{ color: "white" }}
+        >
           Open to select State
         </Button>
         <FormControl className={classes.formControl}>
-          <InputLabel id="demo-controlled-open-select-label">State</InputLabel>
+          <InputLabel
+            id="demo-controlled-open-select-label"
+            style={{ color: "white" }}
+          >
+            State
+          </InputLabel>
           <Select
+            style={{ color: "white" }}
             labelId="demo-controlled-open-select-label"
             id="demo-controlled-open-select"
             open={open}
@@ -151,11 +161,18 @@ const States = ({ states }) => {
         <h3>Please wait. Fetching Cities...</h3>
       ) : (
         <div>
-          <Button className={classes.button} onClick={handleCityOpen}>
+          <Button
+            className={classes.button}
+            onClick={handleCityOpen}
+            style={{ color: "white" }}
+          >
             Open to select City
           </Button>
           <FormControl className={classes.formControl}>
-            <InputLabel id="demo-controlled-open-select-city-label">
+            <InputLabel
+              id="demo-controlled-open-select-city-label"
+              style={{ color: "white" }}
+            >
               City
             </InputLabel>
             <Select
@@ -166,6 +183,7 @@ const States = ({ states }) => {
               onOpen={handleCityOpen}
               value={selectedCity}
               onChange={handleCityChange}
+              style={{ color: "white" }}
             >
               <MenuItem key={456} value="">
                 <em>None</em>
@@ -181,11 +199,16 @@ const States = ({ states }) => {
       )}
       <div className={classes.root}>
         {buttonEnable ? (
-          <Button variant="contained" color="primary" onClick={handleOnSubmit}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleOnSubmit}
+            style={{ color: "white" }}
+          >
             Submit
           </Button>
         ) : (
-          <Button variant="contained" disabled>
+          <Button variant="contained" disabled style={{ color: "white" }}>
             Submit
           </Button>
         )}
