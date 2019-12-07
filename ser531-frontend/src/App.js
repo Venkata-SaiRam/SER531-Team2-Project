@@ -21,7 +21,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    Axios.get("http://localhost:8080/getStates?mock=true")
+    Axios.get("http://localhost:8080/getStates?mock=false")
       .then(data => {
         this.setState({ states: data.data.states, gotResults: true });
       })
